@@ -28,6 +28,6 @@
 
 # Executables
 *.exe
-!external/premake/premake.exe
+!external/premake/premake5.exe
 *.out
 *.app
