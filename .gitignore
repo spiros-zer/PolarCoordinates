@@ -40,4 +40,4 @@ Binaries/
 *.app
 
 # Exclusions
-!external/premake/premake5.exe
+!External/premake/premake5.exe
