@@ -27,9 +27,9 @@ public:
     void SetTheta(double InTheta) {_theta = InTheta;}
 
     /** Operator Overloading */
-    PolarCoordinates operator*(const PolarCoordinates& X);
+    PolarCoordinates operator*(const PolarCoordinates& X) const;
 
-    PolarCoordinates operator/(const PolarCoordinates& X);
+    PolarCoordinates operator/(const PolarCoordinates& X) const;
 
     /** @brief Converts the Polar coordinates to a std::string. */
     std::string ToString() const;

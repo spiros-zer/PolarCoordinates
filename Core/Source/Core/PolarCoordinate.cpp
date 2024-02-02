@@ -13,12 +13,12 @@ PolarCoordinates::PolarCoordinates(double InRadius, double InTheta)
 
 PolarCoordinates::PolarCoordinates() : PolarCoordinates(0, 0) {}
 
-PolarCoordinates PolarCoordinates::operator*(const PolarCoordinates& X)
+PolarCoordinates PolarCoordinates::operator*(const PolarCoordinates& X) const
 {
     return {_r * X.GetRadius(), _theta + X.GetTheta()};
 }
 
-PolarCoordinates PolarCoordinates::operator/(const PolarCoordinates& X)
+PolarCoordinates PolarCoordinates::operator/(const PolarCoordinates& X) const
 {
     return {_r / X.GetRadius(), _theta - X.GetTheta()};
 }
