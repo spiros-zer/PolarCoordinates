@@ -7,25 +7,25 @@
 
 PolarCoordinates::PolarCoordinates(double InRadius, double InTheta)
 {
-    _r = InRadius;
-    _theta = InTheta;
+    R = InRadius;
+    Theta = InTheta;
 }
 
 PolarCoordinates::PolarCoordinates() : PolarCoordinates(0, 0) {}
 
 PolarCoordinates PolarCoordinates::operator*(const PolarCoordinates& X) const
 {
-    return {_r * X.GetRadius(), _theta + X.GetTheta()};
+    return {R * X.GetRadius(), Theta + X.GetTheta()};
 }
 
 PolarCoordinates PolarCoordinates::operator/(const PolarCoordinates& X) const
 {
-    return {_r / X.GetRadius(), _theta - X.GetTheta()};
+    return {R / X.GetRadius(), Theta - X.GetTheta()};
 }
 
 std::string PolarCoordinates::ToString() const
 {
     std::ostringstream OutputStringStream;
-    OutputStringStream << _r << "/_" << _theta;
+    OutputStringStream << R << "/_" << Theta;
     return OutputStringStream.str();
 }
