@@ -10,16 +10,28 @@ struct PolarCoordinates
     /** @brief The radius and angle in degrees of the Polar coordinates. */
     double R{}, Theta{};
 
+    /** @brief Array containing the polar coordinates pair. */
+    char* Cstring;
+
+    /** @brief Size of the array. */
+    int Size;
+
     /**** CONSTRUCTORS/DESTRUCTORS */
     PolarCoordinates(double InRadius, double InTheta);
     PolarCoordinates();
 
     /**** SETTERS/GETTERS */
-    double GetRadius() const {return R;}
+    [[nodiscard]] double GetRadius() const {return R;}
     void SetRadius(double InRadius) {R = InRadius;}
 
-    double GetTheta() const {return Theta;}
+    [[nodiscard]] double GetTheta() const {return Theta;}
     void SetTheta(double InTheta) {Theta = InTheta;}
+
+    [[nodiscard]] int GetSize() const {return Size;}
+    void SetSize(int InSize) {Size = InSize;}
+
+    [[nodiscard]] char* GetCstring() const {return Cstring;}
+    void SetCstring(char* InCstring) {Cstring = InCstring;}
 
     /**** OPERATOR OVERLOADING */
     PolarCoordinates operator*(const PolarCoordinates& X) const;
