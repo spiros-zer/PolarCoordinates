@@ -5,7 +5,7 @@
 #include <sstream>
 
 #include "PolarCoordinates.h"
-#include "Converters/Core/Source/Core/Double2Cstring.h"
+#include "Converters/Double2Cstring.h"
 
 PolarCoordinates::PolarCoordinates(double InRadius, double InTheta)
 {
